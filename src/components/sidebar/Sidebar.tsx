@@ -1,12 +1,23 @@
 import Link from "next/link";
 import styles from "./styles.module.css";
+import Image from "next/image";
+import dashboard from "../../../public/icons/dashboardLogo.svg";
 
 export default function Sidebar() {
   return (
     <div className={styles.sidebar}>
       <h1>CAR RENT</h1>
       <div className={styles.sidebar_main_link}>
-        <Link href="/dashboard">Dashboard</Link>
+        <Link href="/dashboard">
+          Dashboard
+          <Image
+            src={dashboard}
+            alt="dashboard"
+            width={20}
+            height={20}
+            style={{ backgroundColor: "black" }}
+          />
+        </Link>
         <Link href="/drivers">Drivers</Link>
         <Link href="/bookings">Bookings</Link>
         <Link href="/notifications">Notifications</Link>
