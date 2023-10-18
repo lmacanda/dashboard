@@ -1,0 +1,14 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+}
+.sidebar_main_link {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar_report_link {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=styles.module.css.map */
