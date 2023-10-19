@@ -7,6 +7,7 @@ import notification from "../../../public/icons/Bell.svg";
 import setting from "../../../public/icons/Settings.svg";
 import payment from "../../../public/icons/Payment.svg";
 import transaction from "../../../public/icons/Transaction.svg";
+import logout from "../../../public/icons/Logout.svg";
 import report from "../../../public/icons/Report.svg";
 import "normalize.css/normalize.css";
 import styles from "./styles.module.css";
@@ -66,7 +67,7 @@ export default function Sidebar() {
         </ul>
       </div>
       <div className={styles.main_menu_logout}>
-        <button className={styles.main_menu_logout_btn}>Logout</button>
+         <button className={styles.main_menu_logout_btn}><Image src={logout} alt="logout" width={20} height={20} />Logout</button>
       </div>
     </div>
   );
