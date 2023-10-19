@@ -1,3 +1,14 @@
 .dashboard {
+  width: 100%;
   display: flex;
+}
+.dashboard_left {
+  width: 40%;
+  display: flex;
+  flex-flow: row wrap;
+}
+.dashboard_right {
+  width: 60%;
+  display: flex;
+  flex-flow: column nowrap;
 }/*# sourceMappingURL=styles.module.css.map */

@@ -74,6 +74,7 @@
 .main_menu_logout_btn {
   width: 100%;
   font-size: 18px;
+  font-style: normal;
   font-weight: 500;
   line-height: 24px;
   height: 48px;
@@ -83,6 +84,15 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease-out;
+}
+.main_menu_logout_btn:hover, .main_menu_logout_btn:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 1;
+}
+.main_menu_logout_btn img {
+  position: relative;
+  top: 3.5px;
+  right: 14px;
 }
 .main_menu .menu_item {
   font-size: 16px;
