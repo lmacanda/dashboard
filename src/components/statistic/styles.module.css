@@ -1,0 +1,130 @@
+.statistic {
+  padding: 4% 5%;
+  background-color: #f8f7f1;
+}
+.statistic_title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #525256;
+}
+.statistic_date {
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 1%;
+  color: #a3a3a3;
+}
+.statistic_card {
+  display: flex;
+  flex-direction: column;
+}
+.statistic_card_item {
+  display: flex;
+  padding: 24px 24px 20px 24px;
+  background-color: #fdfdfd;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
+.statistic_card_item_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.statistic_card_item_title h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #525256;
+}
+.statistic_card_item_title p {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #525256;
+  background-color: #f4f5f7;
+}
+.statistic_card_item_income {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.statistic_card_item_income h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #01150c;
+}
+.statistic_card_item_income p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ff2727;
+}
+.statistic_card_item_compared {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #525256;
+}
+.statistic_card_item_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.statistic_card_item_info p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #525256;
+}
+.statistic_card_item_expences {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.statistic_card_item_expences h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #01150c;
+}
+.statistic_card_item_expences p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #52c93f;
+}
+.statistic_card_item_total_hired {
+  display: flex;
+}
+.statistic_card_item_total_hired_circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 25px;
+  background-color: #006aff;
+}
+.statistic_card_item_total_hired span {
+  color: #52c93f;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.statistic_card_item_total_canceled {
+  display: flex;
+}
+.statistic_card_item_total_canceled_circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 25px;
+  background-color: #52c93f;
+}
+.statistic_card_item_total_canceled span {
+  color: #52c93f;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.statistic_card_item_total_pending {
+  display: flex;
+}
+.statistic_card_item_total_pending_circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 25px;
+  background-color: #ff2727;
+}
+.statistic_card_item_total_pending span {
+  color: #ff2727;
+  font-size: 0.875rem;
+  font-weight: 700;
+}/*# sourceMappingURL=styles.module.css.map */

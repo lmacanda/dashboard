@@ -10,9 +10,12 @@ import transaction from "../../../public/icons/Transaction.svg";
 import report from "../../../public/icons/Report.svg";
 import "normalize.css/normalize.css";
 import styles from "./styles.module.css";
+import Image from "next/image";
+import dashboard from "../../../public/icons/dashboardLogo.svg";
 
 export default function Sidebar() {
   return (
+<<<<<<< HEAD
     <div className={styles.main_menu}>
       <h1 className={styles.main_menu_title_logo}>CAR RENT</h1>
       <div className={styles.main_menu_main}>
@@ -44,6 +47,25 @@ export default function Sidebar() {
             <Link href="/settings">Settings</Link>
           </li>
         </ul>
+=======
+    <div className={styles.sidebar}>
+      <h1>CAR RENT</h1>
+      <div className={styles.sidebar_main_link}>
+        <Link href="/dashboard">
+          Dashboard
+          <Image
+            src={dashboard}
+            alt="dashboard"
+            width={20}
+            height={20}
+            style={{ backgroundColor: "black" }}
+          />
+        </Link>
+        <Link href="/drivers">Drivers</Link>
+        <Link href="/bookings">Bookings</Link>
+        <Link href="/notifications">Notifications</Link>
+        <Link href="/settings">Settings</Link>
+>>>>>>> statistic
       </div>
       <div className={styles.main_menu_split}>
         <div className={styles.main_menu_split_line}></div>

@@ -1,0 +1,161 @@
+@use "colors" as c;
+
+@use "fonts" as f;
+
+.statistic {
+  padding: 4% 5%;
+  background-color: c.$Background;
+
+  &_title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: c.$Gray-02;
+  }
+
+  &_date {
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-top: 1%;
+    color: c.$Gray-03;
+  }
+
+  &_card {
+    display: flex;
+    flex-direction: column;
+
+    &_item {
+      display: flex;
+      padding: 24px 24px 20px 24px;
+      background-color: c.$White;
+      flex-direction: column;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+
+      &_title {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        h3 {
+          font-size: f.$fonts-18px;
+          font-weight: 500;
+          color: c.$Gray-02;
+        }
+
+        p {
+          font-size: f.$fonts-12px;
+          font-weight: 400;
+          color: c.$Gray-02;
+          background-color: c.$Gray-04;
+        }
+      }
+
+      &_income {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        h2 {
+          font-size: f.$fonts-28px;
+          font-weight: 700;
+          color: c.$Black;
+        }
+
+        p {
+          font-size: f.$fonts-16px;
+          font-weight: 500;
+          color: c.$Secondary;
+        }
+      }
+
+      &_compared {
+        font-size: f.$fonts-14px;
+        font-weight: 300;
+        color: c.$Gray-02;
+      }
+
+      &_info {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        p {
+          font-size: f.$fonts-14px;
+          font-weight: 500;
+          color: c.$Gray-02;
+        }
+      }
+
+      &_expences {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        h2 {
+          font-size: f.$fonts-28px;
+          font-weight: 700;
+          color: c.$Black;
+        }
+
+        p {
+          font-size: f.$fonts-16px;
+          font-weight: 500;
+          color: c.$Green;
+        }
+      }
+
+      &_total {
+        &_hired {
+          display: flex;
+
+          &_circle {
+            width: 16px;
+            height: 16px;
+            border-radius: 25px;
+            background-color: c.$Primary;
+          }
+
+          span {
+            color: c.$Green;
+            font-size: f.$fonts-14px;
+            font-weight: 700;
+          }
+        }
+
+        &_canceled {
+          display: flex;
+
+          &_circle {
+            width: 16px;
+            height: 16px;
+            border-radius: 25px;
+            background-color: c.$Green;
+          }
+
+          span {
+            color: c.$Green;
+            font-size: f.$fonts-14px;
+            font-weight: 700;
+          }
+        }
+
+        &_pending {
+          display: flex;
+
+          &_circle {
+            width: 16px;
+            height: 16px;
+            border-radius: 25px;
+            background-color: c.$Secondary;
+          }
+
+          span {
+            color: c.$Secondary;
+            font-size: f.$fonts-14px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
