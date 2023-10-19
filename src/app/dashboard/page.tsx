@@ -2,8 +2,7 @@ import RentalTable from "@/components/RentalTable";
 import SearchBar from "@/components/SearchBar";
 import Statistic from "@/components/Statistic";
 import styles from "./styles.module.css";
-
-import Link from "next/link";
+import 'normalize.css/normalize.css';
 
 export default function Dashboard() {
   return (
