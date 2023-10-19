@@ -1,6 +1,7 @@
 .statistic {
   padding: 4% 5%;
   background-color: #f8f7f1;
+  width: 340px;
 }
 .statistic_title {
   font-size: 1.25rem;
@@ -14,8 +15,10 @@
   color: #a3a3a3;
 }
 .statistic_card {
+  margin-top: 73px;
   display: flex;
   flex-direction: column;
+  gap: 72px;
 }
 .statistic_card_item {
   display: flex;
@@ -24,11 +27,14 @@
   flex-direction: column;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  gap: 2px;
 }
 .statistic_card_item_title {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(163, 163, 163, 0.2);
 }
 .statistic_card_item_title h3 {
   font-size: 1.125rem;
@@ -45,6 +51,8 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  padding-top: 10px;
+  margin-bottom: 10px;
 }
 .statistic_card_item_income h2 {
   font-size: 1.75rem;
@@ -75,6 +83,8 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  padding-top: 10px;
+  margin-bottom: 10px;
 }
 .statistic_card_item_expences h2 {
   font-size: 1.75rem;
@@ -86,8 +96,8 @@
   font-weight: 500;
   color: #52c93f;
 }
-.statistic_card_item_total_hired {
-  display: flex;
+.statistic_card_item_total table {
+  border-spacing: 8px;
 }
 .statistic_card_item_total_hired_circle {
   width: 16px;
@@ -95,13 +105,10 @@
   border-radius: 25px;
   background-color: #006aff;
 }
-.statistic_card_item_total_hired span {
+.statistic_card_item_total_hired_arrow {
   color: #52c93f;
   font-size: 0.875rem;
   font-weight: 700;
-}
-.statistic_card_item_total_canceled {
-  display: flex;
 }
 .statistic_card_item_total_canceled_circle {
   width: 16px;
@@ -109,13 +116,10 @@
   border-radius: 25px;
   background-color: #52c93f;
 }
-.statistic_card_item_total_canceled span {
+.statistic_card_item_total_canceled_arrow {
   color: #52c93f;
   font-size: 0.875rem;
   font-weight: 700;
-}
-.statistic_card_item_total_pending {
-  display: flex;
 }
 .statistic_card_item_total_pending_circle {
   width: 16px;
@@ -123,7 +127,7 @@
   border-radius: 25px;
   background-color: #ff2727;
 }
-.statistic_card_item_total_pending span {
+.statistic_card_item_total_pending_arrow {
   color: #ff2727;
   font-size: 0.875rem;
   font-weight: 700;

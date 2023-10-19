@@ -46,32 +46,58 @@ export default function Statistic() {
             <h3>Hire vs Cancel</h3>
             <p>Today</p>
           </div>
-          <div className={styles.statistic_card_item_total}>
-            <div className={styles.statistic_card_item_total_hired}>
-              <div
-                className={styles.statistic_card_item_total_hired_circle}
-              ></div>
-              <p>Total Hired</p>
-              <p>54%</p>
-              <span>↑</span>
-            </div>
-            <div className={styles.statistic_card_item_total_canceled}>
-              <div
-                className={styles.statistic_card_item_total_canceled_circle}
-              ></div>
-              <p>Total Canceled</p>
-              <p>20%</p>
-              <span>↑</span>
-            </div>
-            <div className={styles.statistic_card_item_total_pending}>
-              <div
-                className={styles.statistic_card_item_total_pending_circle}
-              ></div>
-              <p>Total Pending</p>
-              <p>26%</p>
-              <span>↓</span>
-            </div>
-          </div>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <div
+                    className={styles.statistic_card_item_total_hired_circle}
+                  ></div>
+                </td>
+                <td>
+                  <p>Total Hired</p>
+                </td>
+                <td>
+                  <p>54%</p>
+                </td>
+                <td className={styles.statistic_card_item_total_hired_arrow}>
+                  <span>↑</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div
+                    className={styles.statistic_card_item_total_canceled_circle}
+                  ></div>
+                </td>
+                <td>
+                  <p>Total Canceled</p>
+                </td>
+                <td>
+                  <p>20%</p>
+                </td>
+                <td className={styles.statistic_card_item_total_canceled_arrow}>
+                  <span>↑</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div
+                    className={styles.statistic_card_item_total_pending_circle}
+                  ></div>
+                </td>
+                <td>
+                  <p>Total Pending</p>
+                </td>
+                <td>
+                  <p>26%</p>
+                </td>
+                <td className={styles.statistic_card_item_total_pending_arrow}>
+                  <span>↓</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         {/* End Card */}
       </div>

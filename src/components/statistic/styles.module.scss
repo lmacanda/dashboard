@@ -5,6 +5,7 @@
 .statistic {
   padding: 4% 5%;
   background-color: c.$Background;
+  width: 340px;
 
   &_title {
     font-size: 1.25rem;
@@ -20,8 +21,10 @@
   }
 
   &_card {
+    margin-top: 73px;
     display: flex;
     flex-direction: column;
+    gap: 72px;
 
     &_item {
       display: flex;
@@ -30,11 +33,14 @@
       flex-direction: column;
       border-radius: 8px;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+      gap: 2px;
 
       &_title {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(163, 163, 163, 0.2);
 
         h3 {
           font-size: f.$fonts-18px;
@@ -54,6 +60,8 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+        padding-top: 10px;
+        margin-bottom: 10px;
 
         h2 {
           font-size: f.$fonts-28px;
@@ -90,6 +98,8 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+        padding-top: 10px;
+        margin-bottom: 10px;
 
         h2 {
           font-size: f.$fonts-28px;
@@ -105,9 +115,10 @@
       }
 
       &_total {
+        table {
+          border-spacing: 8px;
+        }
         &_hired {
-          display: flex;
-
           &_circle {
             width: 16px;
             height: 16px;
@@ -115,7 +126,7 @@
             background-color: c.$Primary;
           }
 
-          span {
+          &_arrow {
             color: c.$Green;
             font-size: f.$fonts-14px;
             font-weight: 700;
@@ -123,8 +134,6 @@
         }
 
         &_canceled {
-          display: flex;
-
           &_circle {
             width: 16px;
             height: 16px;
@@ -132,7 +141,7 @@
             background-color: c.$Green;
           }
 
-          span {
+          &_arrow {
             color: c.$Green;
             font-size: f.$fonts-14px;
             font-weight: 700;
@@ -140,8 +149,6 @@
         }
 
         &_pending {
-          display: flex;
-
           &_circle {
             width: 16px;
             height: 16px;
@@ -149,7 +156,7 @@
             background-color: c.$Secondary;
           }
 
-          span {
+          &_arrow {
             color: c.$Secondary;
             font-size: f.$fonts-14px;
             font-weight: 700;
