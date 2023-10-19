@@ -1,3 +1,17 @@
 .dashboard {
+  width: 100%;
   display: flex;
+
+  &_left {
+    width: 40%;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &_right {
+    width: 60%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  
 }
