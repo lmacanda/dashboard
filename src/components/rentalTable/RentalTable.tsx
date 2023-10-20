@@ -1,4 +1,8 @@
 import styles from "./styles.module.scss";
+import Image from "next/image";
+import green from "../../../public/icons/green.svg";
+import blue from "../../../public/icons/blue.svg";
+import red from "../../../public/icons/red.svg";
 
 export default function RentalTable() {
   return (
@@ -20,19 +24,60 @@ export default function RentalTable() {
             <td>01</td>
             <td>6465</td>
             <td>
-              <div className="driver-image"></div>
+              <div className={styles.rental_table_driver_image}></div>
               Driver Name
             </td>
-            <td>
-              <div className="status-circle green"></div>
+            <td className={styles.rental_table_status}>
+              <div>
+                <Image src={green} alt="green" width={20} height={20} />
+              </div>
               Completed
             </td>
             <td>$35.44</td>
             <td>
-              <button className="details-button">Details</button>
+              <button className={styles.rental_table_btn}>Details</button>
             </td>
           </tr>
           {/* second row */}
+          <tr>
+            <td>01</td>
+            <td>6465</td>
+            <td>
+              <div className={styles.rental_table_driver_image}></div>
+              Driver Name
+            </td>
+            <td className={styles.rental_table_status}>
+              <div>
+                {" "}
+                <Image src={blue} alt="green" width={20} height={20} />
+              </div>
+              Completed
+            </td>
+            <td>$35.44</td>
+            <td>
+              <button className={styles.rental_table_btn}>Details</button>
+            </td>
+          </tr>
+          {/* third row */}
+          <tr>
+            <td>01</td>
+            <td>6465</td>
+            <td>
+              <div className={styles.rental_table_driver_image}></div>
+              Driver Name
+            </td>
+            <td className={styles.rental_table_status}>
+              <div>
+                <Image src={red} alt="red" width={20} height={20} />
+              </div>
+              Completed
+            </td>
+            <td>$35.44</td>
+            <td>
+              <button className={styles.rental_table_btn}>Details</button>
+            </td>
+          </tr>
+          {/* fourth row */}
         </tbody>
       </table>
     </div>
