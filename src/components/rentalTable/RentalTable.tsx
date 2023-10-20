@@ -1,14 +1,16 @@
+import styles from "./styles.module.scss";
+
 export default function RentalTable() {
   return (
-    <div>
+    <div className={styles.rental}>
       <table>
-        <thead>
+        <thead className={styles.rental_table_head}>
           <tr>
-            <th>No.</th>
-            <th>Car No.</th>
-            <th>Driver</th>
-            <th>Status</th>
-            <th>Earning</th>
+            <th className={styles.rental_table_head_number}>No.</th>
+            <th className={styles.rental_table_head_car_number}>Car No.</th>
+            <th className={styles.rental_table_head_driver}>Driver</th>
+            <th className={styles.rental_table_head_status}>Status</th>
+            <th className={styles.rental_table_head_earning}>Earning</th>
             <th></th>
           </tr>
         </thead>
