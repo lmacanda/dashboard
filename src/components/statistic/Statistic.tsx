@@ -55,10 +55,12 @@ export default function Statistic() {
                   ></div>
                 </td>
                 <td>
-                  <p>Total Hired</p>
+                  <p className={styles.statistic_vard_item_total_text}>
+                    Total Hired
+                  </p>
                 </td>
                 <td>
-                  <p>54%</p>
+                  <p className={styles.statistic_vard_item_total_text}>54%</p>
                 </td>
                 <td className={styles.statistic_card_item_total_hired_arrow}>
                   <span>↑</span>
@@ -71,10 +73,12 @@ export default function Statistic() {
                   ></div>
                 </td>
                 <td>
-                  <p>Total Canceled</p>
+                  <p className={styles.statistic_vard_item_total_text}>
+                    Total Canceled
+                  </p>
                 </td>
                 <td>
-                  <p>20%</p>
+                  <p className={styles.statistic_vard_item_total_text}>20%</p>
                 </td>
                 <td className={styles.statistic_card_item_total_canceled_arrow}>
                   <span>↑</span>
@@ -87,10 +91,12 @@ export default function Statistic() {
                   ></div>
                 </td>
                 <td>
-                  <p>Total Pending</p>
+                  <p className={styles.statistic_vard_item_total_text}>
+                    Total Pending
+                  </p>
                 </td>
                 <td>
-                  <p>26%</p>
+                  <p className={styles.statistic_vard_item_total_text}>26%</p>
                 </td>
                 <td className={styles.statistic_card_item_total_pending_arrow}>
                   <span>↓</span>

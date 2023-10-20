@@ -118,6 +118,12 @@
         table {
           border-spacing: 8px;
         }
+
+        &_text {
+          font-size: f.$fonts-16px;
+          font-weight: 400;
+        }
+
         &_hired {
           &_circle {
             width: 16px;
