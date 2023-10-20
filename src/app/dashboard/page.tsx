@@ -8,7 +8,7 @@ export default function Dashboard() {
   return (
     <div className={styles.dashboard}>
       <Statistic />
-      <SearchBar />
+
       <RentalTable />
     </div>
   );
