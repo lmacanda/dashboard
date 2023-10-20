@@ -9,8 +9,8 @@ export default function SearchBar() {
       <Image src={notificationBadge} alt="notification" width={24} height={24} />
       <form className={styles.searchbar_form}>
         <div className={styles.searchbar_form_box}>
+          <input className={styles.searchbar_form_box_input} type="text" placeholder="Search here..." />
           <Image src={search} alt="search" width={24} height={24} />
-          <input className={styles.searchbar_form_box_input} type="text" />
         </div>
       </form>
     </div>
