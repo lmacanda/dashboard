@@ -99,6 +99,11 @@
 .statistic_card_item_total table {
   border-spacing: 8px;
 }
+.statistic_card_item_total_text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
+}
 .statistic_card_item_total_hired_circle {
   width: 16px;
   height: 16px;
