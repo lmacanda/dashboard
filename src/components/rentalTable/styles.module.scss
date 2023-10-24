@@ -5,10 +5,39 @@
 @use "fonts" as f;
 
 .rental {
+  margin-top: 32px;
+  margin-left: 28px;
+  border-radius: 8px;
+  box-shadow: 0px 12px 12px 12px rgba(51, 51, 51, 0.05);
+
+  &_head {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+    margin-bottom: 12px;
+
+    &_title {
+      font-size: f.$fonts-16px;
+      font-weight: 600;
+      color: c.$Black;
+    }
+
+    &_filter {
+      display: inline-flex;
+      gap: 8px;
+      padding-right: 8px;
+
+      &_text {
+        font-size: f.$fonts-14px;
+        font-weight: 500;
+        color: c.$Gray-02;
+      }
+    }
+  }
+
   table {
     width: 800px;
     border-collapse: separate;
-    border-spacing: 0 16px;
   }
 
   thead,
@@ -26,9 +55,25 @@
     text-align: center;
   }
 
+  th {
+    font-size: f.$fonts-14px;
+    font-weight: 300;
+    color: c.$Gray-02;
+    text-align: start;
+  }
+
+  th:first-child,
+  td:first-child {
+    font-size: f.$fonts-12px;
+    font-weight: 300;
+    color: c.$Gray-02;
+  }
+
   th:not(:first-child),
   td:not(:first-child) {
     padding-left: 26px; /* 26px spacing between 1st and 2nd column */
+    font-weight: 400;
+    font-size: f.$fonts-14px;
   }
 
   th:nth-child(2),
@@ -65,6 +110,9 @@
       display: flex;
       align-items: center;
       gap: 16px;
+      font-size: f.$fonts-16px;
+      font-weight: 300;
+      color: c.$Gray-02;
 
       &_green {
         width: 20px;
@@ -73,6 +121,12 @@
         margin-right: 4px;
         background-color: green;
       }
+    }
+
+    &_earning {
+      font-size: f.$fonts-16px;
+      font-weight: 300;
+      color: c.$Gray-02;
     }
 
     &_btn {
@@ -85,6 +139,13 @@
       background-color: #007bff;
       color: #fff;
       border: none;
+      transition: all 0.2s ease-out;
+
+      &:hover,
+      &:focus {
+        background-color: #0b5fd4;
+        opacity: 1;
+      }
     }
   }
 }
