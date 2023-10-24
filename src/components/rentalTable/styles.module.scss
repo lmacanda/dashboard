@@ -42,14 +42,28 @@
   }
 
   &_table {
-    &_driver_image {
+    &_driver {
       display: flex;
       align-items: center;
+      gap: 16px;
+
+      &_image {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      &_name {
+        font-size: f.$fonts-16px;
+        font-weight: 400;
+        color: c.$Black;
+      }
     }
 
     &_status {
       display: flex;
-      align-items: baseline;
+      align-items: center;
       gap: 16px;
 
       &_green {
