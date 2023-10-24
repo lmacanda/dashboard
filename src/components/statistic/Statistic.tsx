@@ -34,7 +34,9 @@ export default function Statistic() {
             <h2>$ 5660.00</h2>
             <p>↓ 2,5%</p>
           </div>
-          <p>Compared to $5240 yesterday</p>
+          <p className={styles.statistic_card_item_compared}>
+            Compared to $5240 yesterday
+          </p>
           <div className={styles.statistic_card_item_info}>
             <p>Last week expences</p>
             <p>$22658.00</p>
@@ -42,11 +44,11 @@ export default function Statistic() {
         </div>
         {/* Third Card */}
         <div className={styles.statistic_card_item}>
-          <div className={styles.statistic_card_item_title}>
+          <div className={styles.statistic_card_item_total_title}>
             <h3>Hire vs Cancel</h3>
             <p>Today</p>
           </div>
-          <table>
+          <table className={styles.statistic_card_item_total_table}>
             <tbody>
               <tr>
                 <td>
