@@ -8,6 +8,7 @@
   width: 340px;
 
   &_title {
+    margin-top: 10%;
     font-size: 1.25rem;
     font-weight: 500;
     color: c.$Gray-02;
@@ -24,7 +25,7 @@
     margin-top: 73px;
     display: flex;
     flex-direction: column;
-    gap: 72px;
+    gap: 73px;
 
     &_item {
       display: flex;
@@ -80,6 +81,7 @@
         font-size: f.$fonts-14px;
         font-weight: 300;
         color: c.$Gray-02;
+        margin-bottom: 2px;
       }
 
       &_info {
@@ -115,7 +117,27 @@
       }
 
       &_total {
-        table {
+        &_title {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+          margin-bottom: 30px;
+
+          h3 {
+            font-size: f.$fonts-18px;
+            font-weight: 500;
+            color: c.$Gray-02;
+          }
+
+          p {
+            font-size: f.$fonts-12px;
+            font-weight: 400;
+            color: c.$Gray-02;
+            background-color: c.$Gray-04;
+          }
+        }
+
+        &_table {
           border-spacing: 8px;
         }
 
