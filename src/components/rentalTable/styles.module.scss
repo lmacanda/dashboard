@@ -1,0 +1,90 @@
+/* Colors */
+@use "colors" as c;
+
+/* Fonts */
+@use "fonts" as f;
+
+.rental {
+  table {
+    width: 800px;
+    border-collapse: separate;
+    border-spacing: 0 16px;
+  }
+
+  thead,
+  th {
+    color: c.$Gray-02;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  th,
+  td {
+    text-align: center;
+  }
+
+  th:not(:first-child),
+  td:not(:first-child) {
+    padding-left: 26px; /* 26px spacing between 1st and 2nd column */
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    padding-right: 32px; /* 32px spacing between 2nd and 3rd column */
+  }
+
+  th:nth-child(3),
+  td:nth-child(3) {
+    padding-right: 64px; /* 64px spacing between 3rd and 4th column */
+  }
+
+  &_table {
+    &_driver {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      &_image {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      &_name {
+        font-size: f.$fonts-16px;
+        font-weight: 400;
+        color: c.$Black;
+      }
+    }
+
+    &_status {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      &_green {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: 4px;
+        background-color: green;
+      }
+    }
+
+    &_btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+    }
+  }
+}
