@@ -1,0 +1,52 @@
+.rental table {
+  width: 800px;
+  border-collapse: separate;
+  border-spacing: 0 16px;
+}
+.rental th,
+.rental td {
+  padding: 8px;
+}
+.rental th,
+.rental td {
+  text-align: center;
+}
+.rental th:not(:first-child),
+.rental td:not(:first-child) {
+  padding-left: 26px; /* 26px spacing between 1st and 2nd column */
+}
+.rental th:nth-child(2),
+.rental td:nth-child(2) {
+  padding-right: 32px; /* 32px spacing between 2nd and 3rd column */
+}
+.rental th:nth-child(3),
+.rental td:nth-child(3) {
+  padding-right: 64px; /* 64px spacing between 3rd and 4th column */
+}
+.rental_table_driver_image {
+  display: flex;
+  align-items: center;
+}
+.rental_table_status {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.rental_table_status_green {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 4px;
+  background-color: green;
+}
+.rental_table_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}/*# sourceMappingURL=styles.module.css.map */

@@ -1,5 +1,7 @@
 import RentalTable from "@/components/RentalTable";
 import SearchBar from "@/components/searchbar/SearchBar";
+import RentalTable from "@/components/rentalTable/RentalTable";
+import SearchBar from "@/components/SearchBar";
 import Statistic from "@/components/statistic/Statistic";
 import styles from "./styles.module.css";
 import "normalize.css/normalize.css";
@@ -14,6 +16,9 @@ export default function Dashboard() {
         <SearchBar />
         <RentalTable />
       </div>
+      <Statistic />
+
+      <RentalTable />
     </div>
   );
 }
