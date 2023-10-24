@@ -6,10 +6,19 @@ import red from "../../../public/icons/red.svg";
 import driver3 from "../../../public/images/driver3.jpeg";
 import driver2 from "../../../public/images/driver2.jpeg";
 import driver1 from "../../../public/images/driver1.jpeg";
+import Filter from "../../../public/icons/filter.svg";
 
 export default function RentalTable() {
   return (
     <div className={styles.rental}>
+      <div className={styles.rental_head}>
+        <h2 className={styles.rental_head_title}>Live Car Status</h2>
+        <div className={styles.rental_head_filter}>
+          {" "}
+          <Image src={Filter} alt="filter" width={20} height={20} />
+          <p className={styles.rental_head_filter_text}>Filter</p>
+        </div>
+      </div>
       <table>
         <thead className={styles.rental_table_head}>
           <tr>
@@ -52,7 +61,7 @@ export default function RentalTable() {
                 <div>Completed</div>
               </div>
             </td>
-            <td>$35.44</td>
+            <td className={styles.rental_table_earning}>$35.44</td>
             <td>
               <button className={styles.rental_table_btn}>Details</button>
             </td>
@@ -88,7 +97,7 @@ export default function RentalTable() {
                 <div>Completed</div>
               </div>
             </td>
-            <td>$35.44</td>
+            <td className={styles.rental_table_earning}>$0.00</td>
             <td>
               <button className={styles.rental_table_btn}>Details</button>
             </td>
@@ -123,7 +132,7 @@ export default function RentalTable() {
                 <div>Completed</div>
               </div>
             </td>
-            <td>$35.44</td>
+            <td className={styles.rental_table_earning}>$23.50</td>
             <td>
               <button className={styles.rental_table_btn}>Details</button>
             </td>
@@ -159,7 +168,7 @@ export default function RentalTable() {
                 <div>Completed</div>
               </div>
             </td>
-            <td>$35.44</td>
+            <td className={styles.rental_table_earning}>$23.50</td>
             <td>
               <button className={styles.rental_table_btn}>Details</button>
             </td>
@@ -195,7 +204,7 @@ export default function RentalTable() {
                 <div>Completed</div>
               </div>
             </td>
-            <td>$35.44</td>
+            <td className={styles.rental_table_earning}>$23.50</td>
             <td>
               <button className={styles.rental_table_btn}>Details</button>
             </td>
@@ -231,7 +240,7 @@ export default function RentalTable() {
                 <div>Completed</div>
               </div>
             </td>
-            <td>$35.44</td>
+            <td className={styles.rental_table_earning}>$23.50</td>
             <td>
               <button className={styles.rental_table_btn}>Details</button>
             </td>
@@ -267,7 +276,7 @@ export default function RentalTable() {
                 <div>Completed</div>
               </div>
             </td>
-            <td>$35.44</td>
+            <td className={styles.rental_table_earning}>$23.50</td>
             <td>
               <button className={styles.rental_table_btn}>Details</button>
             </td>
@@ -303,7 +312,7 @@ export default function RentalTable() {
                 <div>Completed</div>
               </div>
             </td>
-            <td>$35.44</td>
+            <td className={styles.rental_table_earning}>$23.50</td>
             <td>
               <button className={styles.rental_table_btn}>Details</button>
             </td>
@@ -339,7 +348,7 @@ export default function RentalTable() {
                 <div>Completed</div>
               </div>
             </td>
-            <td>$35.44</td>
+            <td className={styles.rental_table_earning}>$23.50</td>
             <td>
               <button className={styles.rental_table_btn}>Details</button>
             </td>
@@ -375,7 +384,7 @@ export default function RentalTable() {
                 <div>Completed</div>
               </div>
             </td>
-            <td>$35.44</td>
+            <td className={styles.rental_table_earning}>$23.50</td>
             <td>
               <button className={styles.rental_table_btn}>Details</button>
             </td>
@@ -411,7 +420,7 @@ export default function RentalTable() {
                 <div>Completed</div>
               </div>
             </td>
-            <td>$35.44</td>
+            <td className={styles.rental_table_earning}>$23.50</td>
             <td>
               <button className={styles.rental_table_btn}>Details</button>
             </td>
@@ -447,7 +456,7 @@ export default function RentalTable() {
                 <div>Completed</div>
               </div>
             </td>
-            <td>$35.44</td>
+            <td className={styles.rental_table_earning}>$23.50</td>
             <td>
               <button className={styles.rental_table_btn}>Details</button>
             </td>
