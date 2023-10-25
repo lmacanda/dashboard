@@ -4,6 +4,7 @@
   width: 340px;
 }
 .statistic_title {
+  margin-top: 10%;
   font-size: 1.25rem;
   font-weight: 500;
   color: #525256;
@@ -18,7 +19,7 @@
   margin-top: 73px;
   display: flex;
   flex-direction: column;
-  gap: 72px;
+  gap: 73px;
 }
 .statistic_card_item {
   display: flex;
@@ -68,6 +69,7 @@
   font-size: 0.875rem;
   font-weight: 300;
   color: #525256;
+  margin-bottom: 2px;
 }
 .statistic_card_item_info {
   display: flex;
@@ -96,7 +98,24 @@
   font-weight: 500;
   color: #52c93f;
 }
-.statistic_card_item_total table {
+.statistic_card_item_total_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 30px;
+}
+.statistic_card_item_total_title h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #525256;
+}
+.statistic_card_item_total_title p {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #525256;
+  background-color: #f4f5f7;
+}
+.statistic_card_item_total_table {
   border-spacing: 8px;
 }
 .statistic_card_item_total_text {
