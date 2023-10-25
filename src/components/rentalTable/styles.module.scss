@@ -5,6 +5,7 @@
 @use "fonts" as f;
 
 .rental {
+  width: 95%;
   margin-top: 32px;
   margin-left: 28px;
   border-radius: 8px;
@@ -36,7 +37,7 @@
   }
 
   table {
-    width: 800px;
+    width: 100%;
     border-collapse: separate;
   }
 
