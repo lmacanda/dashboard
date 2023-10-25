@@ -15,9 +15,6 @@ export default function Dashboard() {
         <SearchBar />
         <RentalTable />
       </div>
-      <Statistic />
-
-      <RentalTable />
     </div>
   );
 }
