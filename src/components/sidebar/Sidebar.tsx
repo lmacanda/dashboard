@@ -1,49 +1,63 @@
+"use client";
+import { useState } from "react";
+import { CSSProperties } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import dashboard from "../../../public/icons/Dashboard.svg";
-import car from "../../../public/icons/Car.svg";
-import booking from "../../../public/icons/Booking.svg";
-import notification from "../../../public/icons/Bell.svg";
-import setting from "../../../public/icons/Settings.svg";
-import payment from "../../../public/icons/Payment.svg";
-import transaction from "../../../public/icons/Transaction.svg";
 import logout from "../../../public/icons/Logout.svg";
-import report from "../../../public/icons/Report.svg";
+import harmBurger from "../../../public/icons/Hamburger_Menu.svg";
+import close from "../../../public/icons/Close.svg";
 import "normalize.css/normalize.css";
 import styles from "./styles.module.css";
 
-export default function Sidebar() {
+interface MenuItemProps {
+  text: string;
+  isActive: boolean;
+  onClick: (text: string) => void;
+}
+
+function MenuItem({ text, isActive, onClick }: MenuItemProps) {
   return (
-    <div className={styles.main_menu}>
+    console.log(text.toLowerCase()),
+      <li className={`${styles.menu_item} ${isActive ? styles.menu_item_active : ''}`} onClick={() => onClick(text)}>
+        <div className={`${styles.menu_item_indicator} ${isActive ? styles.menu_item_indicator_active : ''}`}></div>
+        <Image src={`/icons/${text}.svg`} alt={text.toLowerCase()} width={20} height={20} />
+        <Link href={`/${text.toLowerCase()}`}>{text}</Link>
+      </li>
+  );
+}
+
+export default function Sidebar() {
+
+  const [activeItem, setActiveItem] = useState<string>('Dashboard');
+  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
+
+  const menuItems: string[] = ["Dashboard", "Drivers", "Bookings", "Notifications", "Settings"];
+  const reportItems: string[] = ["Payment Details", "Transactions", "Car Report"];
+
+  const handleMenuItemClick = (item: string) => {
+    setActiveItem(item);
+  };
+
+  const mainMenuStyle = {
+    "--drawer-state": isDrawerOpen ? "translateX(0px)" : "translateX(-240px)",
+  } as CSSProperties;
+
+  return (
+    <div className={styles.main_menu} style={mainMenuStyle}>
+      <div className={styles.main_menu_drawerBtn} onClick={() => setIsDrawerOpen(!isDrawerOpen)}>
+        { isDrawerOpen ? <Image src={close} alt="close" width={50} height={50} /> : <Image src={harmBurger} alt="harmBurger" width={20} height={20} /> }
+      </div>
       <h1 className={styles.main_menu_title_logo}>CAR RENT</h1>
       <div className={styles.main_menu_main}>
         <ul className={styles.main_menu_main_list}>
-          <li className={`${styles.menu_item} ${styles.menu_item_active}`}>
-            <div className={styles.menu_item_indicator}></div>
-            <Image src={dashboard} alt="dashboard" width={20} height={20} />
-            <Link href="/dashboard">Dashboard</Link>
-          </li>
-          <li className={styles.menu_item}>
-            <Image src={car} alt="car" width={20} height={20} />
-            <Link href="/drivers">Drivers</Link>
-          </li>
-          <li className={styles.menu_item}>
-            <Image src={booking} alt="booking" width={20} height={20} />
-            <Link href="/bookings">Bookings</Link>
-          </li>
-          <li className={styles.menu_item}>
-            <Image
-              src={notification}
-              alt="notification"
-              width={20}
-              height={20}
+          {menuItems.map((item) => (
+            <MenuItem
+              key={item}
+              text={item}
+              isActive={activeItem === item}
+              onClick={handleMenuItemClick}
             />
-            <Link href="/notifications">Notifications</Link>
-          </li>
-          <li className={styles.menu_item}>
-            <Image src={setting} alt="settings" width={20} height={20} />
-            <Link href="/settings">Settings</Link>
-          </li>
+          ))}
         </ul>
       </div>
       <div className={styles.main_menu_split}>
@@ -52,18 +66,14 @@ export default function Sidebar() {
       <div className={styles.main_menu_report}>
         <p className={styles.main_menu_report_title}>Report</p>
         <ul className={styles.main_menu_report_list}>
-          <li className={styles.menu_item}>
-            <Image src={payment} alt="payment" width={20} height={20} />
-            <Link href="/payment">Payment Details</Link>
-          </li>
-          <li className={styles.menu_item}>
-            <Image src={transaction} alt="transaction" width={20} height={20} />
-            <Link href="/transaction">Transactions</Link>
-          </li>
-          <li className={styles.menu_item}>
-            <Image src={report} alt="report" width={20} height={20} />
-            <Link href="/report">Car Report</Link>
-          </li>
+          {reportItems.map((item) => (
+            <MenuItem
+              key={item}
+              text={item}
+              isActive={activeItem === item}
+              onClick={handleMenuItemClick}
+            />
+          ))}
         </ul>
       </div>
       <div className={styles.main_menu_logout}>
