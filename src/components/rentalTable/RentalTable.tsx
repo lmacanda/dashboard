@@ -58,7 +58,7 @@ export default function RentalTable() {
                 <div>
                   <Image src={green} alt="green" width={20} height={20} />
                 </div>
-                <div>Completed</div>
+                <div className={styles.rental_table_status_text}>Completed</div>
               </div>
             </td>
             <td className={styles.rental_table_earning}>$35.44</td>
@@ -94,7 +94,7 @@ export default function RentalTable() {
                   {" "}
                   <Image src={blue} alt="green" width={20} height={20} />
                 </div>
-                <div>Completed</div>
+                <div className={styles.rental_table_status_text}>Pending</div>
               </div>
             </td>
             <td className={styles.rental_table_earning}>$0.00</td>
@@ -129,7 +129,7 @@ export default function RentalTable() {
                 <div>
                   <Image src={red} alt="red" width={20} height={20} />
                 </div>
-                <div>Completed</div>
+                <div className={styles.rental_table_status_text}>In route</div>
               </div>
             </td>
             <td className={styles.rental_table_earning}>$23.50</td>
@@ -165,7 +165,7 @@ export default function RentalTable() {
                 <div>
                   <Image src={red} alt="red" width={20} height={20} />
                 </div>
-                <div>Completed</div>
+                <div className={styles.rental_table_status_text}>In route</div>
               </div>
             </td>
             <td className={styles.rental_table_earning}>$23.50</td>
@@ -201,7 +201,7 @@ export default function RentalTable() {
                 <div>
                   <Image src={red} alt="red" width={20} height={20} />
                 </div>
-                <div>Completed</div>
+                <div className={styles.rental_table_status_text}>In route</div>
               </div>
             </td>
             <td className={styles.rental_table_earning}>$23.50</td>
@@ -237,7 +237,7 @@ export default function RentalTable() {
                 <div>
                   <Image src={red} alt="red" width={20} height={20} />
                 </div>
-                <div>Completed</div>
+                <div className={styles.rental_table_status_text}>In route</div>
               </div>
             </td>
             <td className={styles.rental_table_earning}>$23.50</td>
@@ -273,7 +273,7 @@ export default function RentalTable() {
                 <div>
                   <Image src={red} alt="red" width={20} height={20} />
                 </div>
-                <div>Completed</div>
+                <div className={styles.rental_table_status_text}>In route</div>
               </div>
             </td>
             <td className={styles.rental_table_earning}>$23.50</td>
@@ -309,7 +309,7 @@ export default function RentalTable() {
                 <div>
                   <Image src={red} alt="red" width={20} height={20} />
                 </div>
-                <div>Completed</div>
+                <div className={styles.rental_table_status_text}>In route</div>
               </div>
             </td>
             <td className={styles.rental_table_earning}>$23.50</td>
@@ -345,7 +345,7 @@ export default function RentalTable() {
                 <div>
                   <Image src={red} alt="red" width={20} height={20} />
                 </div>
-                <div>Completed</div>
+                <div className={styles.rental_table_status_text}>In route</div>
               </div>
             </td>
             <td className={styles.rental_table_earning}>$23.50</td>
@@ -381,7 +381,7 @@ export default function RentalTable() {
                 <div>
                   <Image src={red} alt="red" width={20} height={20} />
                 </div>
-                <div>Completed</div>
+                <div className={styles.rental_table_status_text}>In route</div>
               </div>
             </td>
             <td className={styles.rental_table_earning}>$23.50</td>
@@ -417,7 +417,7 @@ export default function RentalTable() {
                 <div>
                   <Image src={red} alt="red" width={20} height={20} />
                 </div>
-                <div>Completed</div>
+                <div className={styles.rental_table_status_text}>In route</div>
               </div>
             </td>
             <td className={styles.rental_table_earning}>$23.50</td>
@@ -453,7 +453,7 @@ export default function RentalTable() {
                 <div>
                   <Image src={red} alt="red" width={20} height={20} />
                 </div>
-                <div>Completed</div>
+                <div className={styles.rental_table_status_text}>In route</div>
               </div>
             </td>
             <td className={styles.rental_table_earning}>$23.50</td>
