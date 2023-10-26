@@ -2,7 +2,6 @@
 /* Fonts */
 /* Font family */
 .main_menu {
-  display: none;
   flex-direction: column;
   width: 240px;
   min-width: 240px;
