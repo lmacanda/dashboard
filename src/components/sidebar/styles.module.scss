@@ -5,7 +5,7 @@
 @use "fonts" as f;
 
 .main_menu {
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 240px;
   min-width: 240px;
@@ -49,7 +49,7 @@
       width: 176px;
       height: 1px;
       margin: 32px 0 16px 16px;
-      background: rgba(255, 255, 255, 0.20);
+      background: rgba(255, 255, 255, 0.2);
     }
   }
 
@@ -64,7 +64,7 @@
       font-size: 16px;
       font-weight: 400;
       line-height: 24px;
-      color: rgba(255, 255, 255, 0.50);
+      color: rgba(255, 255, 255, 0.5);
     }
 
     &_list {
@@ -75,7 +75,6 @@
       flex-direction: column;
       row-gap: 8px;
     }
-
   }
 
   &_logout {
@@ -91,14 +90,15 @@
       line-height: 24px;
       height: 48px;
       color: #fff;
-      background: rgba(255, 255, 255, 0.20);
+      background: rgba(255, 255, 255, 0.2);
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      transition: all .2s ease-out;
+      transition: all 0.2s ease-out;
 
-      &:hover, &:focus {
-        background-color: rgba(255, 255, 255, .1);
+      &:hover,
+      &:focus {
+        background-color: rgba(255, 255, 255, 0.1);
         opacity: 1;
       }
 
@@ -107,7 +107,6 @@
         top: 3.5px;
         right: 14px;
       }
-
     }
   }
 
@@ -124,10 +123,10 @@
     align-items: center;
     gap: 15px;
     color: #fff;
-    opacity: .75;
+    opacity: 0.75;
     cursor: pointer;
     border-radius: 4px;
-    transition: all .2s ease-out;
+    transition: all 0.2s ease-out;
 
     &_indicator {
       height: 36px;
@@ -139,8 +138,9 @@
       display: none;
     }
 
-    &:hover, &:focus {
-      background-color: rgba(255, 255, 255, .1);
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.1);
       opacity: 1;
     }
 
@@ -149,15 +149,15 @@
       opacity: 1;
     }
 
-    &_active:hover, &_active:focus {
+    &_active:hover,
+    &_active:focus {
       background-color: c.$colorDarkBlue;
       opacity: 1;
     }
-    
-    &_active, &_indicator {
+
+    &_active,
+    &_indicator {
       display: flex;
     }
-
   }
-
 }

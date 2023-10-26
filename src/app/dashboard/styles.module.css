@@ -11,4 +11,16 @@
   width: 75%;
   display: flex;
   flex-flow: column nowrap;
+}
+
+@media (max-width: 1024px) {
+  .dashboard {
+    display: block;
+  }
+  .dashboard_left {
+    width: 100%;
+  }
+  .dashboard_right {
+    width: 100%;
+  }
 }/*# sourceMappingURL=styles.module.css.map */
