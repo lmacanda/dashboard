@@ -35,6 +35,7 @@
 .rental thead,
 .rental th {
   color: #525256;
+  border-bottom: 1px solid #f4f5f7;
 }
 .rental th,
 .rental td {
@@ -122,4 +123,41 @@
 .rental_table_btn:hover, .rental_table_btn:focus {
   background-color: #0b5fd4;
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .rental {
+    box-shadow: 0px 0px;
+    margin: 0 auto;
+  }
+  .rental_head_number {
+    display: none;
+  }
+  .rental table th {
+    text-align: center;
+  }
+  .rental table th:first-child,
+  .rental table td:first-child {
+    display: none;
+  }
+  .rental table th:nth-child(2),
+  .rental table td:nth-child(2) {
+    padding-right: 5px; /* 32px spacing between 2nd and 3rd column */
+  }
+  .rental table th:nth-child(3),
+  .rental table td:nth-child(3) {
+    padding-right: 5px; /* 64px spacing between 3rd and 4th column */
+  }
+  .rental_table_driver_image {
+    display: none;
+  }
+  .rental_table_status {
+    display: block;
+  }
+  .rental_table_status_text {
+    display: none;
+  }
+  .rental_table_btn {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.module.css.map */

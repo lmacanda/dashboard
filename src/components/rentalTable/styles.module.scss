@@ -44,6 +44,7 @@
   thead,
   th {
     color: c.$Gray-02;
+    border-bottom: 1px solid c.$Gray-04;
   }
 
   th,
@@ -146,6 +147,58 @@
       &:focus {
         background-color: #0b5fd4;
         opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .rental {
+    box-shadow: 0px 0px;
+    margin: 0 auto;
+    &_head {
+      &_number {
+        display: none;
+      }
+    }
+
+    table {
+      th {
+        text-align: center;
+      }
+
+      th:first-child,
+      td:first-child {
+        display: none;
+      }
+
+      th:nth-child(2),
+      td:nth-child(2) {
+        padding-right: 5px; /* 32px spacing between 2nd and 3rd column */
+      }
+
+      th:nth-child(3),
+      td:nth-child(3) {
+        padding-right: 5px; /* 64px spacing between 3rd and 4th column */
+      }
+    }
+
+    &_table {
+      &_driver {
+        &_image {
+          display: none;
+        }
+      }
+
+      &_status {
+        display: block;
+        &_text {
+          display: none;
+        }
+      }
+
+      &_btn {
+        display: none;
       }
     }
   }

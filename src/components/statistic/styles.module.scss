@@ -195,3 +195,28 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .statistic {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .statistic {
+    width: 100%;
+    &_title {
+      text-align: center;
+      margin-top: 10%;
+    }
+
+    &_date {
+      text-align: center;
+    }
+
+    &_card {
+      margin-top: 10%;
+      gap: 40px;
+    }
+  }
+}
