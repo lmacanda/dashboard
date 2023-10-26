@@ -13,5 +13,20 @@
     display: flex;
     flex-flow: column nowrap;
   }
-  
+}
+
+//responsive
+
+@media (max-width: 1024px) {
+  .dashboard {
+    display: block;
+
+    &_left {
+      width: 100%;
+    }
+
+    &_right {
+      width: 100%;
+    }
+  }
 }

@@ -155,4 +155,26 @@
   color: #ff2727;
   font-size: 0.875rem;
   font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .statistic {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .statistic {
+    width: 100%;
+  }
+  .statistic_title {
+    text-align: center;
+    margin-top: 10%;
+  }
+  .statistic_date {
+    text-align: center;
+  }
+  .statistic_card {
+    margin-top: 10%;
+    gap: 40px;
+  }
 }/*# sourceMappingURL=styles.module.css.map */
