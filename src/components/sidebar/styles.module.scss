@@ -14,6 +14,34 @@
   padding-inline: 24px;
   background: c.$colorMenuBlack;
 
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all .2s ease-out;
+    transform: var(--drawer-state);
+    z-index: 10;
+  }
+
+  &_drawerBtn {
+    display: none;
+
+    @media screen and (max-width: 768px){
+      position: relative;
+      left: 240px;
+      top: -25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      margin-bottom: -30px;
+      font-size: 25px;
+      transition: all .2s ease-out;
+    }
+
+  }
+
   &_title_logo {
     color: c.$colorWhite;
     font-size: 26px;
@@ -129,16 +157,6 @@
     border-radius: 4px;
     transition: all .2s ease-out;
 
-    &_indicator {
-      height: 36px;
-      width: 6px;
-      margin-left: -16px;
-      border: none;
-      border-radius: 4px;
-      background-color: #fff;
-      display: none;
-    }
-
     &:hover, &:focus {
       background-color: rgba(255, 255, 255, .1);
       opacity: 1;
@@ -153,9 +171,20 @@
       background-color: c.$colorDarkBlue;
       opacity: 1;
     }
-    
-    &_active, &_indicator {
-      display: flex;
+
+    &_indicator  {
+      height: 36px;
+      width: 6px;
+      margin-left: -16px;
+      border: none;
+      border-radius: 4px;
+      background-color: #fff;
+      display: none;
+
+      &_active {
+        display: flex;
+      }
+
     }
 
   }
