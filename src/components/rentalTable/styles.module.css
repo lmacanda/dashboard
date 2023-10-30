@@ -10,8 +10,7 @@
 .rental_head {
   display: flex;
   justify-content: space-between;
-  padding: 0 8px;
-  margin-bottom: 12px;
+  padding: 3% 3% 0 3%;
 }
 .rental_head_title {
   font-size: 1rem;
@@ -24,12 +23,13 @@
   padding-right: 8px;
 }
 .rental_head_filter_text {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #525256;
 }
 .rental table {
   width: 100%;
+  margin: 1% 2% 2% 2%;
   border-collapse: separate;
 }
 .rental thead,
@@ -43,7 +43,7 @@
 }
 .rental th,
 .rental td {
-  text-align: center;
+  text-align: left;
 }
 .rental th {
   font-size: 0.875rem;
@@ -70,6 +70,15 @@
 .rental th:nth-child(3),
 .rental td:nth-child(3) {
   padding-right: 64px; /* 64px spacing between 3rd and 4th column */
+}
+.rental td:nth-child(2) span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #1a1919;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: rgba(153, 153, 153, 0.1);
 }
 .rental_table_driver {
   display: flex;

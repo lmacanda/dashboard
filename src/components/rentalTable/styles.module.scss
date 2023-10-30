@@ -14,8 +14,7 @@
   &_head {
     display: flex;
     justify-content: space-between;
-    padding: 0 8px;
-    margin-bottom: 12px;
+    padding: 3% 3% 0 3%;
 
     &_title {
       font-size: f.$fonts-16px;
@@ -29,7 +28,7 @@
       padding-right: 8px;
 
       &_text {
-        font-size: f.$fonts-14px;
+        font-size: f.$fonts-16px;
         font-weight: 500;
         color: c.$Gray-02;
       }
@@ -38,6 +37,7 @@
 
   table {
     width: 100%;
+    margin: 1% 2% 2% 2%;
     border-collapse: separate;
   }
 
@@ -54,7 +54,7 @@
 
   th,
   td {
-    text-align: center;
+    text-align: left;
   }
 
   th {
@@ -88,7 +88,18 @@
     padding-right: 64px; /* 64px spacing between 3rd and 4th column */
   }
 
+  td:nth-child(2) span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #1a1919;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: rgba(153, 153, 153, 0.10);
+  }
+
   &_table {
+
     &_driver {
       display: flex;
       align-items: center;
