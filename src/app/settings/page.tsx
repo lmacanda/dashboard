@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-export default function Notifications() {
+export default function Settings() {
   return (
-    <div>
-      <h1>Notifications</h1>
+    <div className="page-div">
+      <h1>Settings</h1>
       <p>
-        This is the Notifications page
+        This is the Settings page <br />
         <Link href="/dashboard">Return to dashboard</Link>.
       </p>
     </div>

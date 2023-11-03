@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-export default function Bookings() {
+export default function CarReport() {
   return (
-    <div>
-      <h1>Bookings</h1>
+    <div className="page-div">
+      <h1>Car Report</h1>
       <p>
-        This is the Bookings page
+        This is the Car Report Page <br />
         <Link href="/dashboard">Return to dashboard</Link>.
       </p>
     </div>

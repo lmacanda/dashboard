@@ -1,7 +1,8 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter, usePathname } from 'next/navigation';
 import { CSSProperties } from "react";
-import Link from "next/link";
+import MenuItem from "../menuItem/MenuItem";
 import Image from "next/image";
 import logout from "../../../public/icons/Logout.svg";
 import harmBurger from "../../../public/icons/Hamburger_Menu.svg";
@@ -9,33 +10,42 @@ import close from "../../../public/icons/Close.svg";
 import "normalize.css/normalize.css";
 import styles from "./styles.module.css";
 
-interface MenuItemProps {
-  text: string;
-  isActive: boolean;
-  onClick: (text: string) => void;
-}
-
-function MenuItem({ text, isActive, onClick }: MenuItemProps) {
-  return (
-    console.log(text.toLowerCase()),
-      <li className={`${styles.menu_item} ${isActive ? styles.menu_item_active : ''}`} onClick={() => onClick(text)}>
-        <div className={`${styles.menu_item_indicator} ${isActive ? styles.menu_item_indicator_active : ''}`}></div>
-        <Image src={`/icons/${text}.svg`} alt={text.toLowerCase()} width={20} height={20} />
-        <Link href={`/${text.toLowerCase()}`}>{text}</Link>
-      </li>
-  );
-}
-
 export default function Sidebar() {
 
-  const [activeItem, setActiveItem] = useState<string>('Dashboard');
+  const router = useRouter();
+  const pathname = usePathname().split('/')[1];
+  console.log(pathname);
+
+  const undoNeatPathname = pathname.split('-').join(' ');
+  console.log(undoNeatPathname);
+
+  function capitalizeWords(str: string) {
+    return str
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  }
+
+  const currentActiveItem = capitalizeWords(undoNeatPathname);
+  console.log(currentActiveItem);
+ 
+  const [activeItem, setActiveItem] = useState<string>(currentActiveItem);
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
 
   const menuItems: string[] = ["Dashboard", "Drivers", "Bookings", "Notifications", "Settings"];
   const reportItems: string[] = ["Payment Details", "Transactions", "Car Report"];
 
+  useEffect(() => { console.log("Updated item: " + activeItem) }, [activeItem]);
+
+  function neatUrl(text: string){
+    let neatText: string = text.split(' ').join('-');
+    return neatText;
+}
+
   const handleMenuItemClick = (item: string) => {
+    console.log(item);
     setActiveItem(item);
+    router.push(`/${neatUrl(item).toLocaleLowerCase()}`);
   };
 
   const mainMenuStyle = {
