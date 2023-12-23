@@ -6,7 +6,7 @@ import red from "../../../public/icons/red.svg";
 import driver3 from "../../../public/images/driver3.jpeg";
 import driver2 from "../../../public/images/driver2.jpeg";
 import driver1 from "../../../public/images/driver1.jpeg";
-import Filter from "../../../public/icons/Filter.svg";
+import Filter from "../../../public/icons/filter.svg";
 
 export default function RentalTable() {
   return (
