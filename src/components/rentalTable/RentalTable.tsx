@@ -6,7 +6,7 @@ import red from "../../../public/icons/red.svg";
 import driver3 from "../../../public/images/driver3.jpeg";
 import driver2 from "../../../public/images/driver2.jpeg";
 import driver1 from "../../../public/images/driver1.jpeg";
-import Filter from "../../../public/icons/filter.svg";
+import Filter from "../../../public/icons/Filter.svg";
 
 export default function RentalTable() {
   return (
@@ -34,7 +34,9 @@ export default function RentalTable() {
           {/* first row */}
           <tr>
             <td>01</td>
-            <td><span>6465</span></td>
+            <td>
+              <span>6465</span>
+            </td>
             <td>
               <div className={styles.rental_table_driver}>
                 <div
@@ -69,7 +71,9 @@ export default function RentalTable() {
           {/* second row */}
           <tr>
             <td>02</td>
-            <td><span>5665</span></td>
+            <td>
+              <span>5665</span>
+            </td>
             <td>
               <div className={styles.rental_table_driver}>
                 <div
@@ -105,7 +109,9 @@ export default function RentalTable() {
           {/* third row */}
           <tr>
             <td>03</td>
-            <td><span>1755</span></td>
+            <td>
+              <span>1755</span>
+            </td>
             <td>
               <div className={styles.rental_table_driver}>
                 <div
@@ -141,7 +147,9 @@ export default function RentalTable() {
           {/* row */}
           <tr>
             <td>03</td>
-            <td><span>1755</span></td>
+            <td>
+              <span>1755</span>
+            </td>
             <td>
               <div className={styles.rental_table_driver}>
                 <div
@@ -177,7 +185,9 @@ export default function RentalTable() {
           {/* row */}
           <tr>
             <td>03</td>
-            <td><span>1755</span></td>
+            <td>
+              <span>1755</span>
+            </td>
             <td>
               <div className={styles.rental_table_driver}>
                 <div
@@ -213,7 +223,9 @@ export default function RentalTable() {
           {/* row */}
           <tr>
             <td>03</td>
-            <td><span>1755</span></td>
+            <td>
+              <span>1755</span>
+            </td>
             <td>
               <div className={styles.rental_table_driver}>
                 <div
@@ -249,7 +261,9 @@ export default function RentalTable() {
           {/* row */}
           <tr>
             <td>03</td>
-            <td><span>1755</span></td>
+            <td>
+              <span>1755</span>
+            </td>
             <td>
               <div className={styles.rental_table_driver}>
                 <div
@@ -285,7 +299,9 @@ export default function RentalTable() {
           {/* row */}
           <tr>
             <td>03</td>
-            <td><span>1755</span></td>
+            <td>
+              <span>1755</span>
+            </td>
             <td>
               <div className={styles.rental_table_driver}>
                 <div
@@ -321,7 +337,9 @@ export default function RentalTable() {
           {/* row */}
           <tr>
             <td>03</td>
-            <td><span>1755</span></td>
+            <td>
+              <span>1755</span>
+            </td>
             <td>
               <div className={styles.rental_table_driver}>
                 <div
@@ -357,7 +375,9 @@ export default function RentalTable() {
           {/* row */}
           <tr>
             <td>03</td>
-            <td><span>1755</span></td>
+            <td>
+              <span>1755</span>
+            </td>
             <td>
               <div className={styles.rental_table_driver}>
                 <div
@@ -393,7 +413,9 @@ export default function RentalTable() {
           {/* row */}
           <tr>
             <td>03</td>
-            <td><span>1755</span></td>
+            <td>
+              <span>1755</span>
+            </td>
             <td>
               <div className={styles.rental_table_driver}>
                 <div
@@ -429,7 +451,9 @@ export default function RentalTable() {
           {/* row */}
           <tr>
             <td>03</td>
-            <td><span>1755</span></td>
+            <td>
+              <span>1755</span>
+            </td>
             <td>
               <div className={styles.rental_table_driver}>
                 <div
