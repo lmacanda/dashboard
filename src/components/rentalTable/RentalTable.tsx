@@ -6,7 +6,7 @@ import red from "../../../public/icons/red.svg";
 import driver3 from "../../../public/images/driver3.jpeg";
 import driver2 from "../../../public/images/driver2.jpeg";
 import driver1 from "../../../public/images/driver1.jpeg";
-import Filter from "../../../public/icons/filter.svg";
+import filter from "../../../public/icons/filter.svg";
 
 export default function RentalTable() {
   return (
@@ -15,7 +15,7 @@ export default function RentalTable() {
         <h2 className={styles.rental_head_title}>Live Car Status</h2>
         <div className={styles.rental_head_filter}>
           {" "}
-          <Image src={Filter} alt="filter" width={16} height={16} />
+          <Image src={filter} alt="filter" width={16} height={16} />
           <p className={styles.rental_head_filter_text}>Filter</p>
         </div>
       </div>
