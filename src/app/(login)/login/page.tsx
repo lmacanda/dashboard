@@ -33,7 +33,7 @@ export const Login = () => {
   };
 
   return (
-    <main>
+    <main className={styles.login}>
       <h1>Login To Your Account</h1>
       <button>Google</button>
       <h3>- OR -</h3>´
