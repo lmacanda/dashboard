@@ -1,0 +1,26 @@
+https://ui.shadcn.com/
+
+INSTALL:
+npx shadcn-ui@latest init
+
+Form:
+
+Install:
+npx shadcn-ui@latest add form
+npx shadcn-ui@latest add input
+
+
+Create a form schema
+
+//
+
+"use client"
+
+import * as z from "zod"
+
+const formSchema = z.object({
+  username: z.string().min(2).max(50),
+})
+
+//
+
