@@ -1,7 +1,7 @@
 "use client";
 
-import styles from "./styles.module.scss";
 import Link from "next/link";
+import styles from "./styles.module.scss";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -29,7 +29,7 @@ const FormSchema = z
     message: "Password do not match",
   });
 
-export const Login = () => {
+export const SignUp = () => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -109,4 +109,4 @@ export const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
