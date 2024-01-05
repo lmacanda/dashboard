@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import styles from "./styles.module.scss";
 
 import { useForm } from "react-hook-form";
@@ -18,6 +19,7 @@ import {
 const FormSchema = z
   .object({
     username: z.string().min(1, "Username is required").max(100),
+    email: z.string().email("Invalid email address").max(100),
     password: z
       .string()
       .min(1, "Password is required")
@@ -30,26 +32,46 @@ const FormSchema = z
   });
 
 export const SignUp = () => {
+  const router = useRouter();
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
       username: "",
+      email: "",
       password: "",
       confirmPassword: "",
     },
   });
 
   const onSubmit = async (values: z.infer<typeof FormSchema>) => {
-    console.log(values);
+    const response = await fetch("/api/user", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: values.username,
+        email: values.email,
+        password: values.password,
+      }),
+    });
+    if (response.ok) {
+      router.push("/login");
+    } else {
+      console.error("Registration failed");
+    }
   };
 
   return (
-    <main className={styles.login}>
-      <h1>Login To Your Account</h1>
-      <button className={styles.login_google_btn}>Sign up with Google</button>
-      <h3>- OR -</h3>´
+    <main className={styles.signup}>
+      <h1>Sign Up</h1>
+      <button className={styles.signup_google_btn}>Sign up with Google</button>
+      <h3>- OR -</h3>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)}>
+        <form
+          className={styles.signup_form}
+          onSubmit={form.handleSubmit(onSubmit)}
+        >
           <FormField
             control={form.control}
             name="username"
@@ -59,7 +81,22 @@ export const SignUp = () => {
                   <FormControl>
                     <Input placeholder="username" {...field} />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className={styles.signup_form_message} />
+                </FormItem>
+              </>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <>
+                <FormItem>
+                  <FormControl>
+                    <Input placeholder="email" {...field} />
+                  </FormControl>
+                  <FormMessage className={styles.signup_form_message} />
                 </FormItem>
               </>
             )}
@@ -74,7 +111,7 @@ export const SignUp = () => {
                   <FormControl>
                     <Input type="password" placeholder="password" {...field} />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className={styles.signup_form_message} />
                 </FormItem>
               </>
             )}
@@ -92,17 +129,19 @@ export const SignUp = () => {
                     {...field}
                   />
                 </FormControl>
-                <FormMessage />
+                <FormMessage className={styles.signup_form_message} />
               </FormItem>
             )}
           />
 
           {/* Submit button */}
-          <button>Submit</button>
+          <button>SignUp</button>
         </form>
-        <p>
-          If you don&apos;t have an account, please&nbsp;
-          <Link href="/sign-up">Sign up</Link>
+        <p className={styles.signup_login}>
+          Already Have an Account?
+          <Link className={styles.signup_link} href="/login">
+            Sign in
+          </Link>
         </p>
       </Form>
     </main>
