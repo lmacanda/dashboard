@@ -15,19 +15,13 @@ import {
   FormItem,
 } from "@/components/ui/form";
 
-const FormSchema = z
-  .object({
-    username: z.string().min(1, "Username is required").max(100),
-    password: z
-      .string()
-      .min(1, "Password is required")
-      .min(8, "Password must have than 8 characters"),
-    confirmPassword: z.string().min(1, "Password confirmation is required"),
-  })
-  .refine((data) => data.password === data.confirmPassword, {
-    path: ["confirmPassword"],
-    message: "Password do not match",
-  });
+const FormSchema = z.object({
+  username: z.string().min(1, "Username is required").max(100),
+  password: z
+    .string()
+    .min(1, "Password is required")
+    .min(8, "Password must have than 8 characters"),
+});
 
 export const Login = () => {
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -35,7 +29,6 @@ export const Login = () => {
     defaultValues: {
       username: "",
       password: "",
-      confirmPassword: "",
     },
   });
 
@@ -49,7 +42,10 @@ export const Login = () => {
       <button className={styles.login_google_btn}>Sign up with Google</button>
       <h3>- OR -</h3>´
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)}>
+        <form
+          className={styles.login_form}
+          onSubmit={form.handleSubmit(onSubmit)}
+        >
           <FormField
             control={form.control}
             name="username"
@@ -80,29 +76,14 @@ export const Login = () => {
             )}
           />
 
-          <FormField
-            control={form.control}
-            name="confirmPassword"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input
-                    placeholder="Re-Enter your password"
-                    type="password"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
           {/* Submit button */}
-          <button>Submit</button>
+          <button>SignIn</button>
         </form>
-        <p>
+        <p className={styles.login_signup}>
           If you don&apos;t have an account, please&nbsp;
-          <Link href="/sign-up">Sign up</Link>
+          <Link className={styles.login_link} href="/sign-up">
+            Sign up
+          </Link>
         </p>
       </Form>
     </main>
