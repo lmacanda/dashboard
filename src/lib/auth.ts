@@ -6,6 +6,7 @@ import { compare } from "bcrypt";
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(db),
+  secret: process.env.NEXTAUTH_SECRET,
   session: {
     strategy: "jwt",
   },
@@ -24,7 +25,6 @@ export const authOptions: NextAuthOptions = {
         password: { type: "password" },
       },
       async authorize(credentials) {
-        console.log("Credentials:", credentials);
         if (!credentials?.email || !credentials?.password) {
           console.log("Credentials missing");
           return null;
