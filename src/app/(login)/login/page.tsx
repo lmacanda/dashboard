@@ -1,6 +1,6 @@
 import SignInForm from "@/components/signInForm/SignInForm";
 
-const page = () => {
+const Login = () => {
   return (
     <div>
       <SignInForm />
@@ -8,4 +8,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Login;
