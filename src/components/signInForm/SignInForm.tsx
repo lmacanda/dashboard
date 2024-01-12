@@ -50,7 +50,7 @@ export const SignInForm = () => {
   };
 
   return (
-    <main className={styles.login}>
+    <div className={styles.login}>
       <h1>Login To Your Account</h1>
       <button className={styles.login_google_btn}>Sign up with Google</button>
       <h3>- OR -</h3>´
@@ -99,7 +99,7 @@ export const SignInForm = () => {
           </Link>
         </p>
       </Form>
-    </main>
+    </div>
   );
 };
 

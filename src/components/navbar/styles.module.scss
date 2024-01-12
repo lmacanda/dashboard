@@ -1,0 +1,35 @@
+.navbar {
+  width: 100%;
+  background-color: #1a1919;
+  justify-content: space-between;
+  align-items: baseline;
+
+  display: flex;
+  &_logo {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 25px;
+  }
+
+  &_btn {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 25px;
+
+    button {
+      background-color: transparent;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 5px;
+      padding: 20px 25px;
+      border: 1px solid #fff;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+  }
+}

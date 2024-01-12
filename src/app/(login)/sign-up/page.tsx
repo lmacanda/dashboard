@@ -63,7 +63,7 @@ const SignUp = () => {
   };
 
   return (
-    <main className={styles.signup}>
+    <div className={styles.signup}>
       <h1>Sign Up</h1>
       <button className={styles.signup_google_btn}>Sign up with Google</button>
       <h3>- OR -</h3>
@@ -144,7 +144,7 @@ const SignUp = () => {
           </Link>
         </p>
       </Form>
-    </main>
+    </div>
   );
 };
 
