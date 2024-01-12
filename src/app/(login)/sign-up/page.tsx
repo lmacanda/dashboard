@@ -31,7 +31,7 @@ const FormSchema = z
     message: "Password do not match",
   });
 
-export const SignUp = () => {
+const SignUp = () => {
   const router = useRouter();
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),

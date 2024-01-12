@@ -1,11 +1,9 @@
 import SignInForm from "@/components/signInForm/SignInForm";
 
-const Login = () => {
+export default function Login() {
   return (
     <div>
       <SignInForm />
     </div>
   );
-};
-
-export default Login;
+}
