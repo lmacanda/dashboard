@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <main>
         <Navbar />
-        <div className="flex">
+        <div className="text">
           <h1>Keep your Business organized in just one application</h1>
         </div>
       </main>

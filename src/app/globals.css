@@ -31,7 +31,7 @@ main {
   height: 100%;
 }
 
-main .flex {
+main .text {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +39,7 @@ main .flex {
   padding: 10%;
 }
 
-main .flex h1 {
+main .text h1 {
   font-size: 3.5rem;
   font-weight: 900;
 }
