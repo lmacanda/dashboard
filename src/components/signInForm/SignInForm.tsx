@@ -51,9 +51,9 @@ export const SignInForm = () => {
 
   return (
     <div className={styles.login}>
-      <h1>Login To Your Account</h1>
+      <h1 className={styles.login_text}>Login Into Your Account</h1>
       <button className={styles.login_google_btn}>Sign up with Google</button>
-      <h3>- OR -</h3>´
+      <h3>- OR -</h3>
       <Form {...form}>
         <form
           className={styles.login_form}
@@ -68,7 +68,7 @@ export const SignInForm = () => {
                   <FormControl>
                     <Input placeholder="email" {...field} />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className={styles.login_form_error} />
                 </FormItem>
               </>
             )}
@@ -83,7 +83,7 @@ export const SignInForm = () => {
                   <FormControl>
                     <Input type="password" placeholder="password" {...field} />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className={styles.login_form_error} />
                 </FormItem>
               </>
             )}
@@ -94,7 +94,7 @@ export const SignInForm = () => {
         </form>
         <p className={styles.login_signup}>
           If you don&apos;t have an account, please&nbsp;
-          <Link className={styles.login_link} href="/sign-up">
+          <Link className={styles.login_signup_link} href="/sign-up">
             Sign up
           </Link>
         </p>

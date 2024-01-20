@@ -7,6 +7,10 @@
 
   align-items: center;
 
+  &_text {
+    text-align: center;
+  }
+
   &_google_btn {
     width: 100%;
     margin-top: 5%;
@@ -21,6 +25,10 @@
     color: #fff;
     border: none;
     transition: all 0.2s ease-out;
+  }
+
+  &_google_btn:hover {
+    background-color: #0069d9;
   }
 
   &_form {
@@ -45,6 +53,29 @@
       color: #fff;
       border: none;
       transition: all 0.2s ease-out;
+    }
+
+    button:hover {
+      background-color: #0069d9;
+    }
+
+    &_error {
+      color: red;
+      font-size: 0.6rem;
+      margin-bottom: 3%;
+    }
+  }
+  &_signup {
+    text-align: center;
+
+    &_link {
+      color: #007bff;
+      text-decoration: none;
+      transition: all 0.2s ease-out;
+    }
+
+    &_link:hover {
+      color: #0069d9;
     }
   }
 }
