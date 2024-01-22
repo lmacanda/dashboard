@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter, usePathname } from "next/navigation";
 import { CSSProperties } from "react";
 import MenuItem from "../menuItem/MenuItem";
 import Image from "next/image";
@@ -11,36 +11,47 @@ import "normalize.css/normalize.css";
 import styles from "./styles.module.css";
 
 export default function Sidebar() {
-
   const router = useRouter();
-  const pathname = usePathname().split('/')[1];
+  const pathname = usePathname().split("/")[1];
   console.log(pathname);
 
-  const undoNeatPathname = pathname.split('-').join(' ');
+  const undoNeatPathname = pathname.split("-").join(" ");
   console.log(undoNeatPathname);
 
   function capitalizeWords(str: string) {
     return str
-      .split(' ')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
   }
 
   const currentActiveItem = capitalizeWords(undoNeatPathname);
   console.log(currentActiveItem);
- 
+
   const [activeItem, setActiveItem] = useState<string>(currentActiveItem);
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
 
-  const menuItems: string[] = ["Dashboard", "Drivers", "Bookings", "Notifications", "Settings"];
-  const reportItems: string[] = ["Payment Details", "Transactions", "Car Report"];
+  const menuItems: string[] = [
+    "Dashboard",
+    "Drivers",
+    "Bookings",
+    "Notifications",
+    "Settings",
+  ];
+  const reportItems: string[] = [
+    "Payment Details",
+    "Transactions",
+    "Car Report",
+  ];
 
-  useEffect(() => { console.log("Updated item: " + activeItem) }, [activeItem]);
+  useEffect(() => {
+    console.log("Updated item: " + activeItem);
+  }, [activeItem]);
 
-  function neatUrl(text: string){
-    let neatText: string = text.split(' ').join('-');
+  function neatUrl(text: string) {
+    let neatText: string = text.split(" ").join("-");
     return neatText;
-}
+  }
 
   const handleMenuItemClick = (item: string) => {
     console.log(item);
@@ -54,8 +65,15 @@ export default function Sidebar() {
 
   return (
     <div className={styles.main_menu} style={mainMenuStyle}>
-      <div className={styles.main_menu_drawerBtn} onClick={() => setIsDrawerOpen(!isDrawerOpen)}>
-        { isDrawerOpen ? <Image src={close} alt="close" width={50} height={50} /> : <Image src={harmBurger} alt="harmBurger" width={20} height={20} /> }
+      <div
+        className={styles.main_menu_drawerBtn}
+        onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+      >
+        {isDrawerOpen ? (
+          <Image src={close} alt="close" width={50} height={50} />
+        ) : (
+          <Image src={harmBurger} alt="harmBurger" width={20} height={20} />
+        )}
       </div>
       <h1 className={styles.main_menu_title_logo}>CAR RENT</h1>
       <div className={styles.main_menu_main}>
@@ -87,7 +105,10 @@ export default function Sidebar() {
         </ul>
       </div>
       <div className={styles.main_menu_logout}>
-         <button className={styles.main_menu_logout_btn}><Image src={logout} alt="logout" width={20} height={20} />Logout</button>
+        <button className={styles.main_menu_logout_btn}>
+          <Image src={logout} alt="logout" width={20} height={20} />
+          Logout
+        </button>
       </div>
     </div>
   );
