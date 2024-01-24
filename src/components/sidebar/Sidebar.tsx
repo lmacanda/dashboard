@@ -4,13 +4,19 @@ import { useRouter, usePathname } from "next/navigation";
 import { CSSProperties } from "react";
 import MenuItem from "../menuItem/MenuItem";
 import Image from "next/image";
-import logout from "../../../public/icons/Logout.svg";
+import LogoutBtn from "../logoutBtn/LogoutBtn";
 import harmBurger from "../../../public/icons/Hamburger_Menu.svg";
 import close from "../../../public/icons/Close.svg";
 import "normalize.css/normalize.css";
 import styles from "./styles.module.css";
+import { signOut } from "next-auth/react";
 
-export default function Sidebar() {
+interface SidebarProps {
+  session: any;
+  handleLogout: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ session }) => {
   const router = useRouter();
   const pathname = usePathname().split("/")[1];
   console.log(pathname);
@@ -59,6 +65,10 @@ export default function Sidebar() {
     router.push(`/${neatUrl(item).toLocaleLowerCase()}`);
   };
 
+  const handleLogout = async () => {
+    await signOut({ callbackUrl: "/" });
+  };
+
   const mainMenuStyle = {
     "--drawer-state": isDrawerOpen ? "translateX(0px)" : "translateX(-240px)",
   } as CSSProperties;
@@ -105,11 +115,10 @@ export default function Sidebar() {
         </ul>
       </div>
       <div className={styles.main_menu_logout}>
-        <button className={styles.main_menu_logout_btn}>
-          <Image src={logout} alt="logout" width={20} height={20} />
-          Logout
-        </button>
+        <LogoutBtn session={session} handleLogout={handleLogout} />
       </div>
     </div>
   );
-}
+};
+
+export default Sidebar;
