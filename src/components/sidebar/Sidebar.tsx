@@ -66,7 +66,7 @@ const Sidebar: React.FC<SidebarProps> = ({ session }) => {
   };
 
   const handleLogout = async () => {
-    await signOut({ callbackUrl: "/" });
+    await signOut({ callbackUrl: `${window.location.origin}/login` });
   };
 
   const mainMenuStyle = {

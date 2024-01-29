@@ -1,0 +1,17 @@
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  padding-top: 10%;
+
+  &_animation {
+    width: 150%;
+  }
+
+  &_text {
+    width: 20%;
+    font-size: 2rem;
+    font-weight: 900;
+  }
+}

@@ -31,19 +31,6 @@ main {
   height: 100%;
 }
 
-main .text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
-  padding: 10%;
-}
-
-main .text h1 {
-  font-size: 3.5rem;
-  font-weight: 900;
-}
-
 /*
 @media (prefers-color-scheme: dark) {
   html {
